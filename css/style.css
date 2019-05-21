@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Oxygen&display=swap');
+
 html {
     height: 100%;
 }
@@ -10,23 +12,32 @@ body {
     padding: 0;
 }
 
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    font-family: 'Oxygen', sans-serif;
+    text-decoration: none;
+}
+
 header {
+    margin: 0 15px;
     display: grid;
     height: 0;
+    align-items: center;
 }
 
 header h1 {
-    margin: 10px 0 0 10px;
     grid-column-start: 1;
     grid-column-end: 1;
 }
 
 header ul {
-    margin: 25px 0 0 0;
     list-style-type: none;
 }
 
-header ul li {
+header nav ul li {
     display: inline-block;
     margin: 0 20px 0 0;
 }
