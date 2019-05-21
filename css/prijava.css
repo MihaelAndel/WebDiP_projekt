@@ -1,0 +1,14 @@
+@import "style.css";
+
+header {
+    grid-template-columns: 85% 15%;
+}
+
+input {
+    display: block;
+    margin: 8px 0px;
+}
+
+#upamti-me {
+    display: inline;
+}

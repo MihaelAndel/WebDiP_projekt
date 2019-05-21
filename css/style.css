@@ -1,0 +1,61 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 8% auto auto;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    height: 0;
+}
+
+header h1 {
+    margin: 10px 0 0 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+header ul {
+    margin: 25px 0 0 0;
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+
+main {
+    display: grid;
+    margin: 60px 10px;
+}
+
+main h1 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    padding: 5px 20px;
+    grid-template-columns: 45% 45% 10%;
+}
+
+footer address {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+footer #izmjena {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}

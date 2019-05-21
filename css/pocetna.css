@@ -1,0 +1,25 @@
+@import "style.css";
+
+header {
+    grid-template-columns: 20% 65% 15%;
+}
+
+nav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+nav.prijava-registracija {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+main {
+    grid-template-columns: 20% 60% auto;
+    grid-template-rows: auto auto;
+}
+
+main p {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
