@@ -14,16 +14,76 @@
         <h1 id="naslov">Početna stranica</h1>
         <nav>
             <ul>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href="">test test test test</a>
+                        <a href="">test</a>
+                        <a href="">test</a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href="">test</a>
+                        <a href="">test</a>
+                        <a href="">test</a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
+                <li class="dropdown">Test
+                    <div class="dropdown-content">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <nav class="prijava-registracija">

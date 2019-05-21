@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>Registracija</h1>
-        <nav>
+        <nav class="prijava-registracija">
             <ul>
                 <li> <a href="prijava.php">Prijava</a> </li>
                 <li> <a href="../index.php">Početna</a> </li>

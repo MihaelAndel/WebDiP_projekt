@@ -1,10 +1,14 @@
 @import "style.css";
 
 header {
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 25% 50% 25%;
 }
 
 input {
     display: block;
     margin: 8px 0px;
+}
+
+.prijava-registracija {
+    grid-column-start: 3;
 }

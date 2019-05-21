@@ -1,8 +1,7 @@
 @import "style.css";
 
 header {
-    grid-template-columns: 85% 15%;
-
+    grid-template-columns: 25% 50% 25%;
 }
 
 input {
@@ -12,4 +11,8 @@ input {
 
 #upamti-me {
     display: inline;
+}
+
+.prijava-registracija {
+    grid-column-start: 3;
 }
