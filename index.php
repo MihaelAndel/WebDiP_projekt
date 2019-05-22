@@ -23,6 +23,8 @@ Sesija::kreirajSesiju();
         echo '<p id="tip"> ' .
             $_SESSION['tip']
             . '</p>';
+    } else {
+        echo '<p id="tip">4</p>';
     }
     ?>
     <header>
