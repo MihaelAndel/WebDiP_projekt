@@ -123,3 +123,7 @@ footer #izmjena {
     grid-column-start: 2;
     grid-column-end: 2;
 }
+
+p#tip {
+    display: none;
+}

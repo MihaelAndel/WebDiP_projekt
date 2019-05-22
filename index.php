@@ -12,39 +12,23 @@ Sesija::kreirajSesiju();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/pocetna.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./javascript/app.js"></script>
     <title>Početna stranica</title>
 </head>
 
 <body>
+    <?php
+    if (isset($_SESSION["tip"])) {
+        echo '<p id="tip"> ' .
+            $_SESSION['tip']
+            . '</p>';
+    }
+    ?>
     <header>
         <h1 id="naslov">Početna stranica</h1>
         <nav>
-            <ul>
-                <li class="dropdown">Oprema i lokacije
-                    <div class="dropdown-content">
-                        <a href="">Pretraživanje opreme
-                            po lokaciji</a>
-                        <a href="">Informacije o opremi</a>
-                        <a href="">Informacije o lokaciji</a>
-                        <a href="">Kreiranje zahtjeva za najam opreme</a>
-                    </div>
-                </li>
-                <li class="dropdown">Slike i zahtjevi za slike
-                    <div class="dropdown-content">
-                        <a href="">Kreiranje zahtjeva</a>
-                        <a href="">Pregled mojih zahtjeva</a>
-                        <a href="">Slike u kojima sam označen</a>
-                        <a href="">Moje slike</a>
-                        <a href="">Zahtjevi za slikanje</a>
-                    </div>
-                </li>
-                <li class="dropdown">Administracija
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
+            <ul id="navigacija">
             </ul>
         </nav>
         <nav class="prijava-registracija">
@@ -59,7 +43,7 @@ Sesija::kreirajSesiju();
         <h1>Dobrodošli na početnu stranicu mojeg projekta za kolegij Web dizajn i programiranje!</h1>
         <?php
         if (!isset($_SESSION["korisnik"])) {
-            echo "<p>Za nastavak,  registrirajte se. Ako već imate račun, mo že t e  se samo prijaviti!</p>";
+            echo "<p>Za nastavak, registrirajte se. Ako već imate račun, možete se samo prijaviti!</p>";
         }
         ?>
     </main>
@@ -67,6 +51,7 @@ Sesija::kreirajSesiju();
     <?php
     include 'templates/footer.php';
     ?>
+
 </body>
 
 </html>
