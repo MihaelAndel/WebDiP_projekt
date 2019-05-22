@@ -1,4 +1,8 @@
 <?php
+if ($_SERVER["HTTPS"] != "on") {
+    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+    exit();
+}
 require_once '../php/prijava.class.php';
 require_once '../php/sesija.class.php';
 Sesija::kreirajSesiju();

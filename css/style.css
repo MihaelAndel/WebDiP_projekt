@@ -7,7 +7,7 @@ html {
 body {
     height: 100%;
     display: grid;
-    grid-template-rows: 15% auto auto;
+    grid-template-rows: 12% auto auto;
     margin: 0;
     padding: 0;
     background-color: rgb(222, 230, 229);
