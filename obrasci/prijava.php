@@ -1,3 +1,14 @@
+<?php
+require_once '../php/prijava.class.php';
+require_once '../php/sesija.class.php';
+Sesija::kreirajSesiju();
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $prijava = new Prijava;
+    $prijava->PrijaviSe();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +32,9 @@
     </header>
 
     <main>
-        <form action="">
+        <form action="" method="POST">
             <input type="text" name="korisnicko-ime" id="korisnicko-ime" placeholder="Korisničko ime">
-            <input type="text" name="lozinka" id="lozinka" placeholder="Lozinka">
+            <input type="password" name="lozinka" id="lozinka" placeholder="Lozinka">
             <input type="checkbox" name="upamti-me" id="upamti-me">
             <label for="upamti-me">Upamti me</label>
             <input type="submit" value="Prijavi se">

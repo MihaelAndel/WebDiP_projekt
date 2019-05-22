@@ -1,3 +1,9 @@
+<?php
+require_once 'php/sesija.class.php';
+$index = true;
+Sesija::kreirajSesiju();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,70 +20,25 @@
         <h1 id="naslov">Početna stranica</h1>
         <nav>
             <ul>
-                <li class="dropdown">Test
+                <li class="dropdown">Oprema i lokacije
                     <div class="dropdown-content">
-                        <a href="">test test test test</a>
-                        <a href="">test</a>
-                        <a href="">test</a>
+                        <a href="">Pretraživanje opreme
+                            po lokaciji</a>
+                        <a href="">Informacije o opremi</a>
+                        <a href="">Informacije o lokaciji</a>
+                        <a href="">Kreiranje zahtjeva za najam opreme</a>
                     </div>
                 </li>
-                <li class="dropdown">Test
+                <li class="dropdown">Slike i zahtjevi za slike
                     <div class="dropdown-content">
-                        <a href="">test</a>
-                        <a href="">test</a>
-                        <a href="">test</a>
+                        <a href="">Kreiranje zahtjeva</a>
+                        <a href="">Pregled mojih zahtjeva</a>
+                        <a href="">Slike u kojima sam označen</a>
+                        <a href="">Moje slike</a>
+                        <a href="">Zahtjevi za slikanje</a>
                     </div>
                 </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
-                    <div class="dropdown-content">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
-                </li>
-                <li class="dropdown">Test
+                <li class="dropdown">Administracija
                     <div class="dropdown-content">
                         <a href=""></a>
                         <a href=""></a>
@@ -96,7 +57,11 @@
 
     <main>
         <h1>Dobrodošli na početnu stranicu mojeg projekta za kolegij Web dizajn i programiranje!</h1>
-        <p>Za nastavak, registrirajte se. Ako već imate račun, možete se samo prijaviti!</p>
+        <?php
+        if (!isset($_SESSION["korisnik"])) {
+            echo "<p>Za nastavak,  registrirajte se. Ako već imate račun, mo že t e  se samo prijaviti!</p>";
+        }
+        ?>
     </main>
 
     <?php

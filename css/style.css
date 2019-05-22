@@ -7,7 +7,7 @@ html {
 body {
     height: 100%;
     display: grid;
-    grid-template-rows: 12% auto auto;
+    grid-template-rows: 15% auto auto;
     margin: 0;
     padding: 0;
     background-color: rgb(222, 230, 229);
@@ -37,7 +37,7 @@ header a {
 header h1 {
     grid-column-start: 1;
     grid-column-end: 1;
-    font-size: 40px;
+    font-size: 230%;
 }
 
 ul {
@@ -46,7 +46,7 @@ ul {
 
 header nav ul li {
     font-family: 'Oxygen', sans-serif;
-    font-size: 20px;
+    font-size: 140%;
     display: inline-block;
     margin: 0 20px 0 0;
 }
@@ -54,20 +54,26 @@ header nav ul li {
 .dropdown {
     display: inline-block;
     position: relative;
+    margin-left: 30px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 100px;
-    background-color: rgb(182, 255, 114);
-    font-size: 13px;
+    left: 3%;
+    background-color: rgb(51, 51, 51);
+    width: 110%;
 }
 
 .dropdown-content a {
+    font-size: 75%;
     display: block;
-    padding: 5px;
-    border-bottom: 1px solid rgb(140, 223, 63);
+    padding: 10px 5px;
+    /* border-bottom: 1px solid rgb(0, 0, 0); */
+}
+
+.dropdown:hover {
+    color: aqua;
 }
 
 .dropdown:hover .dropdown-content {
@@ -75,7 +81,7 @@ header nav ul li {
 }
 
 .dropdown-content a:hover {
-    background-color: white;
+    background-color: rgb(85, 85, 85);
 }
 
 .prijava-registracija a {

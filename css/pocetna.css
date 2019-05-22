@@ -1,7 +1,7 @@
 @import "style.css";
 
 header {
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 25% 55% 20%;
 }
 
 nav {

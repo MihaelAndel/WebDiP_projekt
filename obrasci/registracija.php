@@ -1,3 +1,8 @@
+<?php
+require_once '../php/sesija.class.php';
+Sesija::kreirajSesiju();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

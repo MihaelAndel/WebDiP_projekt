@@ -28,34 +28,39 @@
  * @author Matija Novak <matija.novak@foi.hr>
  */
 
-class Sesija {
+class Sesija
+{
 
     const KORISNIK = "korisnik";
     const TIP = "tip"; //dorada
     const KOSARICA = "kosarica";
     const SESSION_NAME = "prijava_sesija";
 
-    static function kreirajSesiju() {
+    static function kreirajSesiju()
+    {
         session_name(self::SESSION_NAME);
 
         if (session_id() == "") {
             session_start();
         }
     }
-    
 
-    static function kreirajKorisnika($korisnik, $tip) { //dorada
+
+    static function kreirajKorisnika($korisnik, $tip)
+    { //dorada
         self::kreirajSesiju();
         $_SESSION[self::KORISNIK] = $korisnik;
         $_SESSION[self::TIP] = $tip;     //dorada
     }
 
-    static function kreirajKosaricu($kosarica) {
+    static function kreirajKosaricu($kosarica)
+    {
         self::kreirajSesiju();
         $_SESSION[self::KOSARICA] = $kosarica;
     }
 
-    static function dajKorisnika() {
+    static function dajKorisnika()
+    {
         self::kreirajSesiju();
         if (isset($_SESSION[self::KORISNIK])) {
             $korisnik[self::KORISNIK] = $_SESSION[self::KORISNIK];
@@ -66,7 +71,8 @@ class Sesija {
         return $korisnik;
     }
 
-    static function dajKosaricu() {
+    static function dajKosaricu()
+    {
         self::kreirajSesiju();
         if (isset($_SESSION[self::KOSARICA])) {
             $kosarica = $_SESSION[self::KOSARICA];
@@ -79,7 +85,8 @@ class Sesija {
     /**
      * Odjavljuje korisnika tj. briše sesiju
      */
-    static function obrisiSesiju() {
+    static function obrisiSesiju()
+    {
         session_name(self::SESSION_NAME);
 
         if (session_id() != "") {
@@ -87,5 +94,4 @@ class Sesija {
             session_destroy();
         }
     }
-
 }
