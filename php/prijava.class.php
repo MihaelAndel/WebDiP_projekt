@@ -30,6 +30,7 @@ class Prijava
             }
 
             if ($autenticiran) {
+                setcookie("webdip-korime", $korime);
                 Sesija::kreirajKorisnika($korime, $tip);
                 header("Location: ../index.php");
             } else {
@@ -38,6 +39,7 @@ class Prijava
         } else {
             $this->BaciPorukuNeispunjenaPolja();
         }
+        $baza->zatvoriDB();
     }
 
     function BaciPorukuNeispunjenaPolja()
