@@ -2,8 +2,6 @@
 
     <izbornik naziv="Oprema i lokacije" uloge="1234">
         <izbor naziv="Pretraživanje opreme po lokaciji" uloge="1234"></izbor>
-        <izbor naziv="Informacije o opremi" uloge="1234"></izbor>
-        <izbor naziv="Informacije o lokaciji" uloge="1234"></izbor>
         <izbor naziv="Kreiranje zahtjeva za najam opreme" uloge="12"></izbor>
     </izbornik>
 

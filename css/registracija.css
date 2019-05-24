@@ -12,3 +12,12 @@ input {
 .prijava-registracija {
     grid-column-start: 3;
 }
+
+main {
+    grid-template-columns: auto auto auto;
+}
+
+form {
+    grid-column-start: 2;
+    margin: 0 auto;
+}

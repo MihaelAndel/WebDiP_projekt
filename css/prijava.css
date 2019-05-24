@@ -1,7 +1,7 @@
 @import "style.css";
 
 header {
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 35% 40% 25%;
 }
 
 input {
@@ -15,4 +15,17 @@ input {
 
 .prijava-registracija {
     grid-column-start: 3;
+}
+
+main {
+    grid-template-columns: auto auto auto;
+}
+
+form {
+    grid-column-start: 2;
+    margin: 0 auto;
+}
+
+a#zaboravljena-lozinka {
+    font-size: 85%;
 }

@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="checkbox" name="upamti-me" id="upamti-me">
             <label class="prikazi" for="upamti-me">Upamti me</label>
             <input type="submit" value="Prijavi se">
+            <a id="zaboravljena-lozinka" href="../obrasci/zaboravljena-lozinka.php">Zaboravljena lozinka?</a>
         </form>
     </main>
 
