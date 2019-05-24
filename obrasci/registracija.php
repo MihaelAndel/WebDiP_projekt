@@ -30,7 +30,8 @@ Sesija::kreirajSesiju();
     </header>
 
     <main>
-        <form action="" onsubmit="validateCaptcha()">
+        <form action="../php/registriraj.php" onsubmit="validateCaptcha()" method="post" autocomplete="off">
+            <input autocomplete="false" style="display:none" name="hidden">
             <label for="ime" id="lblIme"></label>
             <input type="text" name="ime" id="ime" placeholder="Ime" required="required">
             <input type="text" name="prezime" id="prezime" placeholder="Prezime" required="required">

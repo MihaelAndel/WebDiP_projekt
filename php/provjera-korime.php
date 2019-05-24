@@ -15,3 +15,5 @@ while ($red = mysqli_fetch_assoc($rezultat)) {
 
 if ($pronaden) echo "1";
 else echo "0";
+
+$baza->zatvoriDB();

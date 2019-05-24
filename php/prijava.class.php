@@ -20,9 +20,11 @@ class Prijava
 
             while ($red = mysqli_fetch_assoc($rezultat)) {
                 if ($red) {
-                    $autenticiran = true;
-                    $tip = $red["uloga_id"];
-                    break;
+                    if ($red["datum_vrijeme_uvjeta"] === NULL) {
+                        $autenticiran = true;
+                        $tip = $red["uloga_id"];
+                        break;
+                    }
                 } else {
                     $autenticiran = false;
                     break;
@@ -30,11 +32,11 @@ class Prijava
             }
 
             if ($autenticiran) {
-                setcookie("webdip-korime", $korime);
+                setcookie("webdip-korisnik", $korime);
                 Sesija::kreirajKorisnika($korime, $tip);
                 header("Location: ../index.php");
             } else {
-                echo "<script> alert('Nepostojeći korisnik!'); </script>";
+                echo "<script> alert('Nepostojeći korisnik! Možda niste aktivirali svoj račun! (Provjerite e-mail)'); </script>";
             }
         } else {
             $this->BaciPorukuNeispunjenaPolja();

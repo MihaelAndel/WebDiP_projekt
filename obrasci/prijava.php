@@ -37,10 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <main>
         <form action="" method="POST">
-            <input type="text" name="korisnicko-ime" id="korisnicko-ime" placeholder="Korisničko ime">
+            <input type="text" name="korisnicko-ime" id="korisnicko-ime" placeholder="Korisničko ime" value="<?php
+                                                                                                                if (isset($_COOKIE["webdip-korisnik"])) {
+                                                                                                                    $tekst = trim($_COOKIE["webdip-korisnik"]);
+                                                                                                                    echo $tekst;
+                                                                                                                }
+                                                                                                                ?>">
             <input type="password" name="lozinka" id="lozinka" placeholder="Lozinka">
             <input type="checkbox" name="upamti-me" id="upamti-me">
-            <label for="upamti-me">Upamti me</label>
+            <label class="prikazi" for="upamti-me">Upamti me</label>
             <input type="submit" value="Prijavi se">
         </form>
     </main>

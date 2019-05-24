@@ -24,10 +24,7 @@ function createCaptcha() {
 }
 
 function validateCaptcha() {
-    event.preventDefault();
-    if (document.getElementById("cpatchaTextBox").value == code) {
-        alert("Valid Captcha")
-    } else {
+    if (document.getElementById("cpatchaTextBox").value == code) {} else {
         alert("Invalid Captcha. try Again");
         createCaptcha();
     }
