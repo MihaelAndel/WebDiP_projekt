@@ -127,3 +127,13 @@ footer #izmjena {
 p#tip {
     display: none;
 }
+
+input.krivi-unos {
+    background-color: rgb(255, 129, 129);
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    display: none;
+    font-size: 75%;
+}

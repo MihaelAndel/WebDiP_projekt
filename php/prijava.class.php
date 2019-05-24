@@ -1,6 +1,6 @@
 <?php
-require 'baza.class.php';
-require 'sesija.class.php';
+require '../php/baza.class.php';
+require '../php/sesija.class.php';
 class Prijava
 {
     function PrijaviSe()
