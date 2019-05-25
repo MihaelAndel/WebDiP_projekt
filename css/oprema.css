@@ -1,0 +1,23 @@
+@import '../css/style.css';
+
+main {
+    grid-template-columns: auto 25% 25%;
+}
+
+h2 {
+    font-family: "Bree Serif";
+    font-weight: normal;
+    margin: auto;
+    grid-column-start: 2;
+    font-size: 300%;
+}
+
+ul {
+    font-family: "Oxygen", sans-serif;
+    margin: auto;
+}
+
+li {
+    margin: 20px 0;
+    font-size: 150%;
+}

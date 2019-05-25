@@ -1,9 +1,5 @@
 @import "style.css";
 
-header {
-    grid-template-columns: 25% 55% 20%;
-}
-
 nav {
     grid-column-start: 2;
 }
@@ -14,7 +10,10 @@ nav.prijava-registracija {
 
 main {
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+}
+
+main h1 {
+    grid-column-start: 2;
 }
 
 main p {

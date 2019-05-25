@@ -24,19 +24,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/prijava.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../javascript/app.js"></script>
     <title>Prijava</title>
 </head>
 
 <body>
-    <header>
-        <h1>Prijava</h1>
-        <nav class="prijava-registracija">
-            <ul>
-                <li> <a href="registracija.php">Registracija</a> </li>
-                <li> <a href="../index.php">Početna</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <?php include '../templates/tip-korisnika.php'; ?>
+    <?php
+    $naslov = "Prijava";
+    include '../templates/header.php';
+    ?>
 
     <main>
         <form action="" method="POST">

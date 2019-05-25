@@ -1,0 +1,20 @@
+@import '../css/style.css';
+
+main {
+    grid-template-columns: auto auto auto;
+
+}
+
+header h1 {
+    font-size: 180%;
+}
+
+h1 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+form {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}

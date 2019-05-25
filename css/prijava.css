@@ -1,8 +1,5 @@
 @import "style.css";
 
-header {
-    grid-template-columns: 35% 40% 25%;
-}
 
 input {
     display: block;

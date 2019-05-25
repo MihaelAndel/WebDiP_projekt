@@ -5,7 +5,7 @@ Sesija::kreirajSesiju();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 
 <head>
     <meta charset="UTF-8">
@@ -17,18 +17,12 @@ Sesija::kreirajSesiju();
     <title>Početna stranica</title>
 </head>
 
-<body>
-    <?php
-    if (isset($_SESSION["tip"])) {
-        echo '<p id="tip"> ' .
-            $_SESSION['tip']
-            . '</p>';
-    } else {
-        echo '<p id="tip">4</p>';
-    }
-    ?>
+<body id="index">
+    <?php include 'templates/tip-korisnika.php'; ?>
     <header>
-        <h1 id="naslov">Početna stranica</h1>
+        <a href="">
+            <h1 id="naslov">Početna stranica</h1>
+        </a>
         <nav>
             <ul id="navigacija">
             </ul>

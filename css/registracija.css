@@ -1,9 +1,5 @@
 @import "style.css";
 
-header {
-    grid-template-columns: 25% 50% 25%;
-}
-
 input {
     display: block;
     margin: 8px 0px;

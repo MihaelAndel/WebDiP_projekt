@@ -1,0 +1,44 @@
+@import '../css/style.css';
+
+main {
+    grid-template-columns: auto auto auto;
+}
+
+#lokacija-izbor {
+    grid-column-start: 2;
+    font-size: 100%;
+    width: 15%;
+}
+
+div#lista-opreme {
+    width: 100%;
+    display: grid;
+    grid-row-start: 2;
+    grid-template-rows: repeat(auto, 15%);
+    grid-template-columns: auto auto;
+    grid-column-gap: 10%;
+}
+
+div#lista-opreme:nth-child(odd) {
+    grid-column-start: 1;
+}
+
+div#lista-opreme:nth-child(even) {
+    grid-column-start: 2;
+}
+
+div.element-oprema {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(41, 41, 41);
+    margin: 10px auto;
+    padding: 5px 15px;
+    background-color: rgb(212, 255, 255);
+    font-family: Ramabhadra, sans-serif;
+    font-size: 100%;
+}
+
+div.element-oprema:hover {
+    background-color: rgb(193, 255, 255);
+    transition: 0.2s ease-in-out;
+}

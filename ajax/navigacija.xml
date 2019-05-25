@@ -1,16 +1,17 @@
 <navigacija>
 
     <izbornik naziv="Oprema i lokacije" uloge="1234">
-        <izbor naziv="Pretraživanje opreme po lokaciji" uloge="1234"></izbor>
-        <izbor naziv="Kreiranje zahtjeva za najam opreme" uloge="12"></izbor>
+        <izbor naziv="Pretraživanje opreme po lokaciji" 
+        href="/oprema_lokacije/pregled-opreme-i-lokacija.php" uloge="1234"></izbor>
+        <izbor naziv="Kreiranje zahtjeva za najam opreme" href="" uloge="12"></izbor>
     </izbornik>
 
-    <izbornik naziv="Slike i zahtjevi za slike" uloge="123">
-        <izbor naziv="Kreiranje zahtjeva" uloge="123"></izbor>
-        <izbor naziv="Pregled mojih zahtjeva" uloge="123"></izbor>
-        <izbor naziv="Slike u kojima sam označen" uloge="123"></izbor>
-        <izbor naziv="Moje slike" uloge="12"></izbor>
-        <izbor naziv="Zahtjevi za slikanje" uloge="12"></izbor>
+    <izbornik naziv="Slike i zahtjevi za slike" href="" uloge="123">
+        <izbor naziv="Kreiranje zahtjeva" href="" uloge="123"></izbor>
+        <izbor naziv="Pregled mojih zahtjeva" href="" uloge="123"></izbor>
+        <izbor naziv="Slike u kojima sam označen" href="" uloge="123"></izbor>
+        <izbor naziv="Moje slike" href="" uloge="12"></izbor>
+        <izbor naziv="Zahtjevi za slikanje" href="" uloge="12"></izbor>
     </izbornik>
 
     <izbornik naziv="Administracija" uloge="1">

@@ -12,6 +12,7 @@ Sesija::kreirajSesiju();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/registracija.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../javascript/app.js"></script>
     <script src="../javascript/registracija.js"></script>
     <script src="../javascript/captcha.js"></script>
 
@@ -19,15 +20,11 @@ Sesija::kreirajSesiju();
 </head>
 
 <body onload="createCaptcha()">
-    <header>
-        <h1>Registracija</h1>
-        <nav class="prijava-registracija">
-            <ul>
-                <li> <a href="prijava.php">Prijava</a> </li>
-                <li> <a href="../index.php">Početna</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <?php include '../templates/tip-korisnika.php'; ?>
+    <?php
+    $naslov = "Registracija";
+    include '../templates/header.php';
+    ?>
 
     <main>
         <form action="../php/registriraj.php" onsubmit="validateCaptcha()" method="post" autocomplete="off">
