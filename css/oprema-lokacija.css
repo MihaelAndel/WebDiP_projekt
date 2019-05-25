@@ -6,17 +6,22 @@ main {
 
 #lokacija-izbor {
     grid-column-start: 2;
-    font-size: 100%;
-    width: 15%;
+    box-sizing: border-box;
+    width: 20%;
+    margin-bottom: 5%;
+    border: 1px solid rgb(22, 22, 22);
+    border-radius: 20px;
+    box-shadow: 0 0 20px -5px;
+    font-size: 125%;
 }
 
 div#lista-opreme {
-    width: 100%;
     display: grid;
-    grid-row-start: 2;
     grid-template-rows: repeat(auto, 15%);
     grid-template-columns: auto auto;
     grid-column-gap: 10%;
+    grid-row-start: 2;
+    width: 100%;
 }
 
 div#lista-opreme:nth-child(odd) {
@@ -30,15 +35,25 @@ div#lista-opreme:nth-child(even) {
 div.element-oprema {
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid rgb(41, 41, 41);
+    border: 2px solid rgb(22, 22, 22);
     margin: 10px auto;
     padding: 5px 15px;
+    box-shadow: 5px 3px 15px;
     background-color: rgb(212, 255, 255);
-    font-family: Ramabhadra, sans-serif;
     font-size: 100%;
+    font-family: "Ramabhadra", sans-serif;
+    transition: 0.2s ease-in-out;
 }
 
 div.element-oprema:hover {
     background-color: rgb(193, 255, 255);
-    transition: 0.2s ease-in-out;
+}
+
+div.element-oprema a {
+    color: rgb(68, 68, 68);
+    transition: 0.1s ease-in-out;
+}
+
+div.element-oprema a:hover {
+    color: rgb(10, 10, 10);
 }

@@ -40,7 +40,7 @@ $rezultat = $baza->selectDB($sql);
                 . "<h2>{$red['naziv']}</h2>"
                 . "<ul>"
                 . "<li>Nabavna cijena: {$red['nabavna_cijena']}</li>"
-                . "<li>Najama cijena: {$red['najamna_cijena']}</li>";
+                . "<li>Najamna cijena: {$red['najamna_cijena']}</li>";
         }
         ?>
     </main>
