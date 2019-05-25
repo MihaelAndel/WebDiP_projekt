@@ -6,6 +6,9 @@ if ($_SERVER["HTTPS"] != "on") {
 require_once '../php/prijava.class.php';
 require_once '../php/sesija.class.php';
 Sesija::kreirajSesiju();
+if (!isset($_COOKIE["krive-prijave"])) {
+    setcookie("krive-prijave", 0);
+}
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $prijava = new Prijava;
     $prijava->PrijaviSe();
@@ -44,8 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                                                                                                 }
                                                                                                                 ?>">
             <input type="password" name="lozinka" id="lozinka" placeholder="Lozinka">
-            <input type="checkbox" name="upamti-me" id="upamti-me">
-            <label class="prikazi" for="upamti-me">Upamti me</label>
+            <input type="checkbox" name="zapamti-me" id="zapamti-me">
+            <label class="prikazi" for="zapamti-me">Zapamti me</label>
             <input type="submit" value="Prijavi se">
             <a id="zaboravljena-lozinka" href="../obrasci/zaboravljena-lozinka.php">Zaboravljena lozinka?</a>
         </form>
