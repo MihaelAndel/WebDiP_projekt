@@ -83,19 +83,29 @@ $(function () {
 
     $(lozinkaP).change(function () {
         if ($(this).val().length !== 0) {
-            if ($(this).val() !== $(lozinka).val()) {
-                $(this).addClass("krivi-unos");
-                $(lozinka).addClass("krivi-unos");
+            if ($(this).val().length >= 6 && $(lozinka).val().length >= 6) {
+
+                if ($(this).val() !== $(lozinka).val()) {
+                    $(this).addClass("krivi-unos");
+                    $(lozinka).addClass("krivi-unos");
+                    $(lblLozinka).css({
+                        "display": "inline-block"
+                    });
+                    $(lblLozinka).html("Lozinke nisu jednake!");
+                } else {
+                    $(lblLozinka).css({
+                        "display": "none"
+                    });
+                    $(lozinka).removeClass("krivi-unos");
+                    $(this).removeClass("krivi-unos");
+                }
+            } else {
                 $(lblLozinka).css({
                     "display": "inline-block"
                 });
-                $(lblLozinka).html("Lozinke nisu jednake!");
-            } else {
-                $(lblLozinka).css({
-                    "display": "none"
-                });
-                $(lozinka).removeClass("krivi-unos");
-                $(this).removeClass("krivi-unos");
+                $(lblLozinka).html("Lozinka mora imati barem šest znakova!");
+                $(this).addClass("krivi-unos");
+                $(gumb).attr("disabled", "disabled");
             }
         }
     });

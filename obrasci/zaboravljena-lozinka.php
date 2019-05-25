@@ -20,7 +20,12 @@
     </header>
 
     <main>
-        <form action=""></form>
+        <h1>Upišite svoje podatke. Pripazite da korisničko ime i e-mail adresa budu usklađeni.</h1>
+        <form action="../php/zaboravljena-lozinka-odgovor.php">
+            <input type="text" id="korisnicko-ime" name="korisnicko-ime" placeholder="Korisničko ime">
+            <input type="email" id="email" name="email" placeholder="Email adresa">
+            <input type="submit" value="Pošalji">
+        </form>
     </main>
 
     <?php

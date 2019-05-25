@@ -6,10 +6,13 @@ if (ProvjeriPodatke()) {
         $prezime = $_POST["prezime"];
         $korime = $_POST["korisnicko-ime"];
         $lozinka = $_POST["lozinka"];
-        $salt = "JKKG07Q{lrsH:c^+V0S98Zf";
-        $lozinkaK = md5($salt . $lozinka);
         $email = $_POST["email"];
-        $datum = date("Y-m-d H:i:s", strtotime('+24 hours'));
+        $sol = "";
+        for ($i = 0; $i < 10; $i++) {
+                $sol .= $znakovi[rand(0, strlen($znakovi) - 1)];
+        }
+        $lozinkaK = md5($sol . $lozinka);
+        $datum = date("Y-m-d H:i:s", strtotime('+7 hours'));
 
         $sql = "INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka, lozinka_kriptirano, email) 
                 VALUES ('{$ime}', '{$prezime}', '{$korime}', '{$lozinka}', '{$lozinkaK}', '{$email}')";

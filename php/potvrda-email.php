@@ -9,10 +9,9 @@ if (isset($_GET["korisnik"])) {
 
     if ($red = mysqli_fetch_assoc($rezultat)) {
         $datum = date("Y-m-d H:i:s");
-        $datum_baza = strtotime($red["datum_vrijeme_uvjeta"]);
-        echo "$datum_baza";
-        if ($datum_baza !== null) {
-            if ($datum < $datum_baza) {
+        $datumBaza = strtotime($red["datum_vrijeme_uvjeta"]);
+        if ($datumBaza !== null) {
+            if ($datum < $datumBaza) {
                 echo "<p>Nažalost, vrijeme za aktivaciju Vašeg računa je isteklo!</p>";
             } else {
                 $sqlUpdate = "UPDATE korisnik SET datum_vrijeme_uvjeta = NULL WHERE korisnicko_ime = '{$korime}'";
