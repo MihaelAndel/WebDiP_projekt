@@ -9,8 +9,8 @@
             echo "<p id='odjava'>Dobrodošli, " . $_SESSION["korisnik"] .
                 "<br><a href='php/odjava.php'>Odjava</a></p>";
         } else {
-            echo "<p id='odjava'>Dobrodošli, " . $_SESSION["korisnik"] .
-                "<br><a href='../php/odjava.php'>Odjava</a></p>";
+            echo "<span id='odjava'><p>Dobrodošli, " . $_SESSION["korisnik"] .
+                "<br><a href='../php/odjava.php'>Odjava</a></p></span>";
         }
     }
     ?>
