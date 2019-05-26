@@ -1,5 +1,6 @@
 <?php
 require_once '../php/baza.class.php';
+header("Content-Type:text/xml");
 
 $lokacija = $_GET["lokacija"];
 $sql = "";
@@ -20,21 +21,15 @@ if ($lokacija === "default") {
 $baza = new Baza();
 $baza->spojiDB();
 $rezultat = $baza->selectDB($sql);
-
+echo "<popis-opreme>";
 while ($red = mysqli_fetch_assoc($rezultat)) {
-    echo "<div class='element-oprema'>"
-        . "<a href='../oprema_lokacije/oprema.php?oprema={$red["opid"]}'>"
-        . "<h2>{$red['onaziv']} - {$red['vnaziv']}</h2>"
-        . "</a>"
-        . "<ul>"
-        . "<li>Nabavna cijena: {$red['nabavna_cijena']}</li>"
-        . "<li>Najamna cijena: {$red['najamna_cijena']}</li>"
-        . "<li>Lokacija: "
-        . "<a href='../oprema_lokacije/lokacija.php?lokacija={$red["lid"]}'>"
-        . "<b>{$red['lnaziv']}</b>"
-        . "</a>"
-        . "</li>"
-        . "</ul>"
-        . "</div>";
+    echo "<oprema>"
+        . "<naziv poveznica='../oprema_lokacije/oprema.php?oprema={$red["opid"]}'>{$red['onaziv']}</naziv>"
+        . "<tip>{$red['vnaziv']}</tip>"
+        . "<nabava>{$red['nabavna_cijena']}</nabava>"
+        . "<najam>{$red['najamna_cijena']}</najam>"
+        . "<lokacija poveznica='../oprema_lokacije/lokacija.php?lokacija={$red["lid"]}'>{$red['lnaziv']}</lokacija>"
+        . "</oprema>";
 }
+echo "</popis-opreme>";
 $baza->zatvoriDB();

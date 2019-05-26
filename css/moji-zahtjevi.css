@@ -1,0 +1,49 @@
+@import '../css/oprema-lokacija.css';
+
+main {
+    grid-template-columns: 100%;
+}
+
+div#popis-zahtjeva {
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, auto);
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10%;
+}
+
+span.odobren {
+    color: rgb(90, 252, 85);
+    transition: 0.1s ease-in-out;
+}
+
+span.odbijen {
+    color: rgb(255, 154, 38);
+    transition: 0.1s ease-in-out;
+}
+
+span.u-toku {
+    color: rgb(57, 60, 255);
+    transition: 0.1s ease-in-out;
+}
+
+div.odobren:hover {
+    background-color: rgb(56, 131, 56);
+}
+
+div.odbijen:hover {
+    background-color: rgb(199, 61, 61);
+}
+
+
+/* div.element:hover span.odobren {
+    color: rgb(45, 163, 43);
+}
+
+div.element:hover span.odbijen {
+    color: rgb(173, 58, 58);
+}
+
+div.element:hover span.u-toku {
+    color: rgb(19, 22, 168);
+} */

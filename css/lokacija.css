@@ -1,0 +1,31 @@
+@import '../css/style.css';
+
+main {
+    grid-template-columns: 50% 50%;
+}
+
+div#lokacija {
+    display: inline-block;
+    grid-column-start: 1;
+}
+
+div#moderatori {
+    display: inline-block;
+    grid-column-start: 2;
+}
+
+h2 {
+    font-family: "Bree Serif";
+    font-size: 250%;
+}
+
+li {
+    font-family: "Oxygen", sans-serif;
+    font-size: 150%;
+}
+
+ul hr {
+    width: 75%;
+    text-align: left;
+    margin-left: 0;
+}

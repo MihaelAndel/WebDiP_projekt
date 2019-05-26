@@ -12,7 +12,7 @@ $sqlOprema = "SELECT oprema.id_oprema as opid, oprema.naziv as onaziv, oprema.na
     . "FROM oprema, lokacija, vrsta_opreme "
     . "WHERE oprema.lokacija_id = lokacija.id_lokacija AND oprema.vrsta_opreme_id = vrsta_opreme.id_vrsta_opreme";
 
-$sqlLokacija = "SELECT naziv FROM lokacija";
+$sqlLokacija = "SELECT naziv FROM lokacija ORDER BY 1";
 
 $rezultatOprema = $baza->selectDB($sqlOprema);
 $rezultatLokacija = $baza->selectDB($sqlLokacija);
@@ -53,7 +53,7 @@ $rezultatLokacija = $baza->selectDB($sqlLokacija);
         <div id="lista-opreme">
             <?php
             while ($redOprema = mysqli_fetch_assoc($rezultatOprema)) {
-                echo "<div class='element-oprema'>"
+                echo "<div class='element'>"
                     . "<a href='../oprema_lokacije/oprema.php?oprema={$redOprema["opid"]}'>"
                     . "<h2>{$redOprema['onaziv']} - {$redOprema['vnaziv']}</h2>"
                     . "</a>"
