@@ -77,6 +77,7 @@ $rezultat = $baza->selectDB($sql);
                     . "</ul>"
                     . "</div>";
             }
+            $baza->zatvoriDB();
             ?>
         </div>
     </main>
