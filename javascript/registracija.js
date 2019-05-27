@@ -12,7 +12,7 @@ $(function () {
     var regexEmail = new RegExp(/^(\w|(\w\.\w)|\w\.)+@(?=\w*\.)(\w|(\.\w\w)|(\w\.\w\w))+$/);
     var regexIme = new RegExp(/^[A-Z]+\w*/);
 
-    $(ime).change(function () {
+    $(ime).keyup(function () {
         if ($(this).val().length !== 0) {
 
             if (regexIme.test($(this).val())) {
@@ -30,7 +30,7 @@ $(function () {
         }
     });
 
-    $(prezime).change(function () {
+    $(prezime).keyup(function () {
         if ($(this).val().length !== 0) {
             if (regexIme.test($(this).val())) {
                 lblIme.css({
@@ -47,7 +47,7 @@ $(function () {
         }
     });
 
-    $(lozinka).change(function () {
+    $(lozinka).keyup(function () {
         if ($(this).val().length !== 0) {
             if ($(this).val().length < 6) {
                 $(lblLozinka).css({
@@ -81,7 +81,7 @@ $(function () {
         }
     });
 
-    $(lozinkaP).change(function () {
+    $(lozinkaP).keyup(function () {
         if ($(this).val().length !== 0) {
             if ($(this).val().length >= 6 && $(lozinka).val().length >= 6) {
 
@@ -110,7 +110,7 @@ $(function () {
         }
     });
 
-    $(email).change(function () {
+    $(email).keyup(function () {
         if ($(this).val().length !== 0) {
 
             if (regexEmail.test($(this).val())) {
@@ -119,12 +119,11 @@ $(function () {
             } else {
                 $(gumb).attr("disabled", "disabled");
                 $(this).addClass("krivi-unos");
-                alert("Email adresa nije dobrog formata!");
             }
         }
     });
 
-    $(korime).change(function () {
+    $(korime).keyup(function () {
         if ($(this).val().length !== 0) {
             if ($(this).val().length < 4) {
                 $(gumb).attr("disabled", "disabled");

@@ -13,9 +13,12 @@ $(function () {
             $(xml).find("izbornik").each(function () {
                 var html = "";
                 if ($(this).attr("uloge").indexOf(tip) !== -1) {
+
                     html += '<li class="dropdown">' + $(this).attr("naziv") +
                         '<div class="dropdown-content">';
+
                     $(this).find("izbor").each(function () {
+                        
                         if ($(this).attr("uloge").indexOf(tip) >= 0) {
                             html += '<a href="' + index + $(this).attr("href") + '">' +
                                 $(this).attr("naziv") + '</a>';
