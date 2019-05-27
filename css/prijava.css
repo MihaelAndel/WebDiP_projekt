@@ -6,6 +6,10 @@ input {
     margin: 8px 0px;
 }
 
+input[type="checkbox"]{
+    display: inline;
+}
+
 #zapamti-me {
     display: inline;
 }

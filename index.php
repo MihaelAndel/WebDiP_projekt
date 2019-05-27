@@ -18,22 +18,13 @@ Sesija::kreirajSesiju();
 </head>
 
 <body id="index">
-    <?php include 'templates/tip-korisnika.php'; ?>
-    <header>
-        <a href="">
-            <h1 id="naslov">Početna stranica</h1>
-        </a>
-        <nav>
-            <ul id="navigacija">
-            </ul>
-        </nav>
-        <nav class="prijava-registracija">
-            <ul>
-                <li> <a href="./obrasci/prijava.php">Prijava</a> </li>
-                <li> <a href="./obrasci/registracija.php">Registracija</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+    $index = true;
+    $naslov = "Početna stranica";
+    include 'templates/tip-korisnika.php'; 
+    include './templates/header.php';
+    ?>
+    
 
     <main>
         <h1>Dobrodošli na početnu stranicu mojeg projekta za kolegij Web dizajn i programiranje!</h1>

@@ -30,7 +30,7 @@ header {
     display: grid;
     place-items: center;
     align-items: center;
-    grid-template-columns: 25% 60% 15%;
+    grid-template-columns: 22% 63% 15%;
     grid-template-rows: 100%;
 }
 
@@ -157,13 +157,13 @@ input.krivi-unos {
 }
 
 label {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Oxygen', Courier, monospace;
     display: none;
     font-size: 75%;
 }
 
 label.prikazi {
-    display: block;
+    display: inline;
 }
 
 select {

@@ -10,10 +10,16 @@ input {
 }
 
 main {
-    grid-template-columns: auto 90% auto;
+    grid-template-columns: auto;
+}
+
+main div {
+    margin: auto;
+    width: 100%;
+    text-align: center;
 }
 
 form {
-    grid-column-start: 2;
-    margin: 0 auto;
+    display: block;
+    margin: auto;
 }
