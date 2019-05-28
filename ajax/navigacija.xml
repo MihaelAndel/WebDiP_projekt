@@ -10,7 +10,7 @@
         <izbor naziv="Kreiranje zahtjeva" href="/obrasci/zahtjev-za-slikanje.php"
             uloge="123"></izbor>
         <izbor naziv="Pregled mojih zahtjeva" href="/slike/pregled-mojih-zahtjeva.php" uloge="123"></izbor>
-        <izbor naziv="Slike u kojima sam označen" href="" uloge="123"></izbor>
+        <izbor naziv="Slike u kojima sam označen" href="/slike/slike-u-kojima-sam-oznacen.php" uloge="123"></izbor>
         <izbor naziv="Moje slike" href="" uloge="12"></izbor>
         <izbor naziv="Zahtjevi za slikanje" href="" uloge="12"></izbor>
     </izbornik>

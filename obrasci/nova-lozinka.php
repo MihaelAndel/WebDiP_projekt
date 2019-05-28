@@ -1,5 +1,7 @@
 <?php
 require_once '../php/baza.class.php';
+require_once "../php/sesija.class.php";
+Sesija::kreirajSesiju();
 
 $korime = $_GET["korisnik"];
 $kljuc = $_GET["kljuc"];
@@ -16,37 +18,23 @@ $rezultat = $baza->selectDB($sql);
 
 while ($red = mysqli_fetch_assoc($rezultat)) {
     if ($red) {
-        $datumBaza = strtotime($red["datum_vrijeme_uvjeta"]);
+        $datumBaza = strtotime($red["datum_kljuc"]);
         $pronaden = true;
         if ($kljuc === $red["kljuc_lozinka"] && $datum < $datumBaza) {
             $dobarKljuc = true;
         }
     }
 }
-
+$naslov = "Nova lozinka";
+$novaLozinka = true;
+$css = "../css/zaboravljena-lozinka.css";
+$title = "Nova lozinka";
+include '../templates/header.php';
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/registracija.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../javascript/nova-lozinka.js"></script>
-    <title>Nova lozinka</title>
-</head>
-
-<body>
-    <header>
-        <h1>Nova lozinka</h1>
-    </header>
-    <main>
-        <?php
-        if ($dobarKljuc && $pronaden) {
-            echo '
+<main>
+    <?php
+    if ($dobarKljuc && $pronaden) {
+        echo '
             <form action="../php/azuriraj-lozinku.php" method="post">
                 <label for="lozinka" id="lblLozinka"></label>
                 <input type="password" id="lozinka" name="lozinka" placeholder="Nova lozinka" required="required">
@@ -54,14 +42,11 @@ while ($red = mysqli_fetch_assoc($rezultat)) {
                 <input type="submit" value="Ažuriraj lozinku">
                 <input style="display:none" id="korime" name="korime" type="text" value=' . "{$korime}" . '>
             </form>';
-        } else {
-            echo "<h1>Nepostojeći korisnik! Moguće da je isteklo vrijeme
+    } else {
+        echo "<h1>Nepostojeći korisnik! Moguće da je isteklo vrijeme
              zahtjeva za novu lozinku, ili ga niste uopće poslali!</h1>";
-        }
-        ?>
-    </main>
+    }
+    ?>
+</main>
 
-    <?php include '../templates/footer.php'; ?>
-</body>
-
-</html>
+<?php include '../templates/footer.php'; ?>

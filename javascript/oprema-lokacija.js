@@ -2,7 +2,11 @@ $(function () {
     var lokacijaIzbor = $("#lokacija-izbor");
     var listaOpreme = $("#lista-opreme");
 
-    $(lokacijaIzbor).change(function () {
+    DohvatiPodatke();
+
+    $(lokacijaIzbor).change(DohvatiPodatke);
+
+    function DohvatiPodatke() {
         var izabranaLokacija = $(lokacijaIzbor).children("option:selected").val();
         $.ajax({
             method: "get",
@@ -33,5 +37,5 @@ $(function () {
                 $(listaOpreme).html(html);
             }
         });
-    });
+    }
 });

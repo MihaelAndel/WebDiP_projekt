@@ -156,6 +156,15 @@ input.krivi-unos {
     background-color: rgb(255, 129, 129);
 }
 
+select,
+option {
+    border-radius: 20px;
+    background-color: #292929;
+    border: 0;
+    color: #E4E4E4;
+    outline: none;
+}
+
 label {
     font-family: 'Oxygen', Courier, monospace;
     display: none;
@@ -169,4 +178,13 @@ label.prikazi {
 select {
     width: 10%;
     margin: auto;
+}
+
+
+input[type="submit"] {
+    background-color: rgb(41, 41, 41);
+    color: rgb(165, 255, 255);
+    padding: 5px;
+    margin-top: 10px;
+    border: 0;
 }

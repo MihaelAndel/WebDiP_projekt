@@ -13,13 +13,7 @@ main {
     grid-template-columns: auto;
 }
 
-main div {
-    margin: auto;
-    width: 100%;
-    text-align: center;
-}
-
 form {
     display: block;
-    margin: auto;
+    /* margin: auto; */
 }

@@ -31,45 +31,23 @@ if ($red = mysqli_fetch_assoc($rezultat)) {
     mail($email, "Nova lozinka za račun", $sadrzajEmail . $poveznica);
 }
 $baza->zatvoriDB();
+
+$naslov = "Zaboravljena lozinka";
+$css = "../css/zaboravljena-lozinka";
+include '../templates/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="../css/prijava.css">
-
-    <title>Zaboravljena lozinka</title>
-</head>
-
-<body>
-    <header>
-        <h1>Zaboravljena lozinka</h1>
-        <nav class="prijava-registracija">
-            <ul>
-                <li> <a href="../index.php">Početna</a> </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <?php
-
-        if (!$pronaden) {
-            echo "<h1>Korisničko ime koje ste unijeli nije u našem sustavu. Molimo Vas da pokušate ponovo s drugim korisničkim imenom.</h1>";
-        } else {
-            echo "<h1>Poslana je poruka u Vaš e-mail sandučić s uputama za obnovu izgubljene lozinke!</h1>";
-        }
-
-        ?>
-    </main>
-
+<main>
     <?php
-    include '../templates/footer.php';
-    ?>
-</body>
 
-</html>
+    if (!$pronaden) {
+        echo "<h1>Korisničko ime koje ste unijeli nije u našem sustavu. Molimo Vas da pokušate ponovo s drugim korisničkim imenom.</h1>";
+    } else {
+        echo "<h1>Poslana je poruka u Vaš e-mail sandučić s uputama za obnovu izgubljene lozinke!</h1>";
+    }
+
+    ?>
+</main>
+
+<?php
+include '../templates/footer.php';
+?>

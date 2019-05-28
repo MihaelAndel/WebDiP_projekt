@@ -1,7 +1,6 @@
 <?php
 require '../php/baza.class.php';
-require '../php/sesija.class.php';
-
+require_once '../php/sesija.class.php';
 Sesija::kreirajSesiju();
 
 $opremaID = $_GET["oprema"];
@@ -12,41 +11,22 @@ $baza = new Baza();
 $baza->spojiDB();
 
 $rezultat = $baza->selectDB($sql);
+$naslov = "Oprema";
+$css = "../css/oprema.css";
+$title = "Oprema";
+include '../templates/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="hr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../javascript/app.js"></script>
-    <link rel="stylesheet" href="../css/oprema.css">
-    <title>Oprema</title>
-</head>
-
-<body>
+<main>
     <?php
-    $naslov = "Oprema";
-    include '../templates/tip-korisnika.php';
-    include '../templates/header.php';
+    while ($red = mysqli_fetch_assoc($rezultat)) {
+        echo "<img src='{$red['naziv']}'</img>"
+            . "<h2>{$red['naziv']}</h2>"
+            . "<ul>"
+            . "<li>Nabavna cijena: {$red['nabavna_cijena']}</li>"
+            . "<li>Najamna cijena: {$red['najamna_cijena']}</li>";
+    }
     ?>
-    <main>
-        <?php
-        while ($red = mysqli_fetch_assoc($rezultat)) {
-            echo "<img src='{$red['naziv']}'</img>"
-                . "<h2>{$red['naziv']}</h2>"
-                . "<ul>"
-                . "<li>Nabavna cijena: {$red['nabavna_cijena']}</li>"
-                . "<li>Najamna cijena: {$red['najamna_cijena']}</li>";
-        }
-        ?>
-    </main>
-    <?php
-    include '../templates/footer.php';
-    ?>
-</body>
-
-</html>
+</main>
+<?php
+include '../templates/footer.php';
+?>

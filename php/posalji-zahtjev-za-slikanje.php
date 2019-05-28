@@ -37,5 +37,5 @@ $sql = "INSERT INTO zahtjev_za_uslugu "
 echo $sql;
 $baza->updateDB($sql);
 $baza->zatvoriDB();
-header("Location: ../slike/pregled-mojih-zahtjeva");
+header("Location: ../slike/pregled-mojih-zahtjeva.php");
 exit();

@@ -1,17 +1,16 @@
 @import '../css/style.css';
 
 form {
-    text-align: center;
+    text-align: left;
     font-size: 125%;
 }
 
 form select,
-input,
-textarea,
-label {
+form textarea {
     display: block;
     margin-bottom: 10px;
     font-size: 80%;
+    width: 100%;
 }
 
 select {
@@ -19,7 +18,7 @@ select {
 }
 
 input[type="checkbox"] {
-    display: inline-block;
+    display: inline;
 }
 
 label {

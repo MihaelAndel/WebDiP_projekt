@@ -12,6 +12,10 @@ div#popis-zahtjeva {
     grid-column-gap: 10%;
 }
 
+div#popis-zahtjeva h2:hover {
+    text-decoration: none;
+}
+
 span.odobren {
     color: rgb(90, 252, 85);
     transition: 0.1s ease-in-out;
@@ -34,16 +38,3 @@ div.odobren:hover {
 div.odbijen:hover {
     background-color: rgb(199, 61, 61);
 }
-
-
-/* div.element:hover span.odobren {
-    color: rgb(45, 163, 43);
-}
-
-div.element:hover span.odbijen {
-    color: rgb(173, 58, 58);
-}
-
-div.element:hover span.u-toku {
-    color: rgb(19, 22, 168);
-} */

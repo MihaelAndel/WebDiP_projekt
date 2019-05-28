@@ -10,7 +10,6 @@ main {
     width: 20%;
     margin-bottom: 5%;
     border: 1px solid rgb(22, 22, 22);
-    border-radius: 20px;
     box-shadow: 0 0 20px -5px;
     font-size: 125%;
 }
@@ -55,25 +54,14 @@ div.element:hover h2 {
     color: rgb(68, 68, 68);
 }
 
-div.element a,
-h2 {
+h2,
+div.element a {
     display: inline-block;
     color: #E4E4E4;
     transition: 0.1s ease-in-out;
 }
 
-div.element a:hover {
+div.element a:hover,
+div.element h2:hover {
     text-decoration: underline;
-}
-
-select,
-option {
-    background-color: #292929;
-    border: 0;
-    color: #E4E4E4;
-    outline: none;
-}
-
-option {
-    border-radius: 5px;
 }
