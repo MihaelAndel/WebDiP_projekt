@@ -5,7 +5,7 @@ Sesija::kreirajSesiju();
 $baza = new Baza();
 $baza->spojiDB();
 
-$sqlLokacija = "SELECT naziv FROM lokacija ORDER BY 1";
+$sqlLokacija = "SELECT naziv, id_lokacija FROM lokacija ORDER BY 1";
 
 $rezultatLokacija = $baza->selectDB($sqlLokacija);
 $opremaLokacija = true;
@@ -20,7 +20,7 @@ include '../templates/header.php';
         <option value="default" selected="selected">Sve lokacije</option>
         <?php
         while ($redLokacija = mysqli_fetch_assoc($rezultatLokacija)) {
-            echo "<option value={$redLokacija['naziv']}>{$redLokacija['naziv']}</option>";
+            echo "<option value={$redLokacija['id_lokacija']}>{$redLokacija['naziv']}</option>";
         }
         ?>
     </select>

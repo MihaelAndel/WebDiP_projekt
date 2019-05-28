@@ -1,1 +1,13 @@
 @import '../css/style.css';
+
+main {
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(auto-fill, auto);
+    grid-column-gap: 5%;
+}
+
+div.element h2:hover{
+    text-decoration: none;
+}

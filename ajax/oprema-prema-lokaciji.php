@@ -1,6 +1,6 @@
 <?php
 require_once '../php/baza.class.php';
-header("Content-Type:text/xml");
+header("Content-type:application/xml");
 
 $lokacija = $_GET["lokacija"];
 $sql = "";
@@ -15,21 +15,24 @@ if ($lokacija === "default") {
         . "FROM oprema, lokacija, vrsta_opreme "
         . "WHERE oprema.lokacija_id = lokacija.id_lokacija "
         . "AND oprema.vrsta_opreme_id = vrsta_opreme.id_vrsta_opreme "
-        . "AND lokacija.naziv = '{$lokacija}'";
+        . "AND lokacija.id_lokacija = {$lokacija}";
 }
 
 $baza = new Baza();
 $baza->spojiDB();
 $rezultat = $baza->selectDB($sql);
-echo "<popis-opreme>";
+$header = "<?xml version='1.0'?><popis-opreme></popis-opreme>";
+$xml = new SimpleXMLElement($header);
+
 while ($red = mysqli_fetch_assoc($rezultat)) {
-    echo "<oprema>"
-        . "<naziv poveznica='../oprema_lokacije/oprema.php?oprema={$red["opid"]}'>{$red['onaziv']}</naziv>"
-        . "<tip>{$red['vnaziv']}</tip>"
-        . "<nabava>{$red['nabavna_cijena']}</nabava>"
-        . "<najam>{$red['najamna_cijena']}</najam>"
-        . "<lokacija poveznica='../oprema_lokacije/lokacija.php?lokacija={$red["lid"]}'>{$red['lnaziv']}</lokacija>"
-        . "</oprema>";
+    $novaOprema = $xml->addChild("oprema");
+    $nazivOpreme = $novaOprema->addChild("naziv", $red["onaziv"]);
+    $nazivOpreme->addAttribute('poveznica', '../oprema_lokacije/oprema.php?oprema='.$red["opid"]);
+    $tipOpreme = $novaOprema->addChild("tip", $red["vnaziv"]);
+    $nabavaOprema = $novaOprema->addChild("nabava", $red["nabavna_cijena"]);
+    $najamOprema = $novaOprema->addChild("najam", $red["najamna_cijena"]);
+    $lokacijaOprema = $novaOprema->addChild("lokacija", $red["lnaziv"]);
+    $lokacijaOprema->addAttribute("poveznica", "../oprema_lokacije/lokacija.php?lokacija=".$red["lid"]);
 }
-echo "</popis-opreme>";
+echo $xml->asXML();
 $baza->zatvoriDB();
