@@ -3,6 +3,7 @@ require_once '../php/baza.class.php';
 require_once '../php/sesija.class.php';
 Sesija::kreirajSesiju();
 
+
 $lokacija = $_GET["lokacija"];
 $baza = new Baza();
 $baza->spojiDB();

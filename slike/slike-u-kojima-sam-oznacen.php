@@ -2,6 +2,11 @@
 require_once '../php/sesija.class.php';
 require_once '../php/baza.class.php';
 Sesija::kreirajSesiju();
+
+if (!isset($_SESSION["tip"])) {
+    header("Location: ../index.php");
+}
+
 $baza = new Baza();
 $baza->spojiDB();
 
@@ -26,8 +31,8 @@ include '../templates/header.php';
         echo "<div class='element'>";
         echo "<h2>Zahtjev #" . $red["zahtjev_za_uslugu_id"] . ", Slika #" . $red["id_slika"] . "</h2>";
         echo "<ul>";
-        echo "<li>".$red["opis_slike"] ."</li>";
-        echo "<li>".$red["datum_slikanja"] . "</li>";
+        echo "<li>" . $red["opis_slike"] . "</li>";
+        echo "<li>" . $red["datum_slikanja"] . "</li>";
         echo "</ul>";
         echo "</div>";
     }

@@ -19,6 +19,7 @@ $(function () {
                     var lokacija = $(this).find("lokacija").text();
                     var oznacavanje = $(this).find("oznacavanje").text();
                     var marketing = $(this).find("marketing").text();
+                    var email = $(this).find("email").text();
                     var id = $(this).find("id").text();
                     html += "<div class='element' id='" + id + "'>";
                     html += "<h2>" + ime + " " + prezime + " (" + korime + ") - " + lokacija + "</h2>";
@@ -26,6 +27,7 @@ $(function () {
                     html += "<li>Opis zahtjeva: " + opis + "</li>";
                     html += "<li>Odobrava označavanje: " + oznacavanje + "</li>";
                     html += "<li>Odobrava marketing: " + marketing + "</li>";
+                    html += "<li>Kontakt: " + email + "</li>";
                     html += "</ul>";
                     html += "<button onclick='OdobriZahtjev(" + id + ")' class='odobri'>Odobri</button>";
                     html += "<button onclick='OdbijZahtjev(" + id + ")' class='odbij'>Odbij</button>";

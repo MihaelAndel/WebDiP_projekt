@@ -1,5 +1,14 @@
 <?php
+require_once '../php/sesija.class.php';
 require_once '../php/baza.class.php';
+Sesija::kreirajSesiju();
+
+if (!isset($_SESSION["tip"])) {
+    header("Location: ../index.php");
+} else if ($_SESSION["tip"] > 2) {
+    header("Location: ../index.php");
+}
+
 $odgovor = $_GET["odgovor"];
 $id = $_GET["id"];
 $datum = date("Y-m-d");

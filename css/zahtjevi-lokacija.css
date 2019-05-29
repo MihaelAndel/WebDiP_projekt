@@ -5,17 +5,22 @@ div.element h2:hover {
 }
 
 div.element button {
+    border-radius: 3px;
+    border: 0;
     margin-left: 50px;
     padding: 5px;
+    background-color: #bdbdbd;
+    font-weight: 700;
+    color: #292929;
     transition: 0.2s ease-in-out;
 }
 
 div.element button.odobri:hover {
+    background-color: #292929;
     color: rgb(88, 155, 0);
-    font-weight: 900;
 }
 
 div.element button.odbij:hover {
+    background-color: #292929;
     color: rgb(200, 0, 0);
-    font-weight: 900;
 }

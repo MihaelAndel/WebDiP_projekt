@@ -2,6 +2,9 @@
 require_once '../php/baza.class.php';
 require_once '../php/sesija.class.php';
 Sesija::kreirajSesiju();
+if (!isset($_SESSION["tip"])) {
+    header("Location: ../index.php");
+}
 foreach ($_POST as $k => $v) {
     if (empty($v)) {
         echo "<script>alert('Nisu ispunjena sva polja!');</script>";

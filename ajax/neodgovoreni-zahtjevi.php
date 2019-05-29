@@ -1,12 +1,20 @@
 <?php
+require_once '../php/sesija.class.php';
 require_once '../php/baza.class.php';
+Sesija::kreirajSesiju();
+
+if (!isset($_SESSION["tip"])) {
+    header("Location: ../index.php");
+} else if ($_SESSION["tip"] > 2) {
+    header("Location: ../index.php");
+}
 header("Content-type:application/xml");
 
 $korID = $_REQUEST["korid"];
 $baza = new Baza();
 $baza->spojiDB();
 
-$sql = "SELECT z.id_zahtjev_za_uslugu as id, k.ime AS ime, k.prezime AS prezime, k.korisnicko_ime AS korime, l.naziv AS lnaziv, z.opis_slike AS opis, "
+$sql = "SELECT k.email as email, z.id_zahtjev_za_uslugu as id, k.ime AS ime, k.prezime AS prezime, k.korisnicko_ime AS korime, l.naziv AS lnaziv, z.opis_slike AS opis, "
     . "z.odobrava_oznacavanje AS oznacavanje, z.odobrava_marketing AS marketing "
     . "FROM zahtjev_za_uslugu z, moderator_lokacija m, korisnik k, lokacija l "
     . "WHERE z.lokacija_id = m.lokacija_id_lokacija "
@@ -31,6 +39,7 @@ while ($red = mysqli_fetch_assoc($rezultat)) {
     $zahtjev->addChild("ime", $red["ime"]);
     $zahtjev->addChild("prezime", $red["prezime"]);
     $zahtjev->addChild("korime", $red["korime"]);
+    $zahtjev->addChild("email", $red["email"]);
     $zahtjev->addChild("opis", $red["opis"]);
     $zahtjev->addChild("lokacija", $red["lnaziv"]);
     $zahtjev->addChild("oznacavanje", $oznacavanje);

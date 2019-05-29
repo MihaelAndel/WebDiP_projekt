@@ -1,7 +1,11 @@
 <?php
 require_once "../php/sesija.class.php";
-Sesija::kreirajSesiju();
 require_once '../php/baza.class.php';
+Sesija::kreirajSesiju();
+
+if (!isset($_SESSION["tip"])) {
+    header("Location: ../index.php");
+}
 
 $baza = new Baza();
 $baza->spojiDB();
