@@ -27,12 +27,12 @@ $xml = new SimpleXMLElement($header);
 while ($red = mysqli_fetch_assoc($rezultat)) {
     $novaOprema = $xml->addChild("oprema");
     $nazivOpreme = $novaOprema->addChild("naziv", $red["onaziv"]);
-    $nazivOpreme->addAttribute('poveznica', '../oprema_lokacije/oprema.php?oprema='.$red["opid"]);
+    $nazivOpreme->addAttribute('poveznica', '../oprema_lokacije/oprema.php?oprema=' . $red["opid"]);
     $tipOpreme = $novaOprema->addChild("tip", $red["vnaziv"]);
     $nabavaOprema = $novaOprema->addChild("nabava", $red["nabavna_cijena"]);
     $najamOprema = $novaOprema->addChild("najam", $red["najamna_cijena"]);
     $lokacijaOprema = $novaOprema->addChild("lokacija", $red["lnaziv"]);
-    $lokacijaOprema->addAttribute("poveznica", "../oprema_lokacije/lokacija.php?lokacija=".$red["lid"]);
+    $lokacijaOprema->addAttribute("poveznica", "../oprema_lokacije/lokacija.php?lokacija=" . $red["lid"]);
 }
 echo $xml->asXML();
 $baza->zatvoriDB();

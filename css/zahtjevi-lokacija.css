@@ -1,0 +1,21 @@
+@import '../css/style.css';
+
+div.element h2:hover {
+    text-decoration: none;
+}
+
+div.element button {
+    margin-left: 50px;
+    padding: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+div.element button.odobri:hover {
+    color: rgb(88, 155, 0);
+    font-weight: 900;
+}
+
+div.element button.odbij:hover {
+    color: rgb(200, 0, 0);
+    font-weight: 900;
+}

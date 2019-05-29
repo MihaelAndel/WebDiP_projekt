@@ -24,6 +24,13 @@ a {
     text-decoration: none;
 }
 
+p:hover,
+li:hover,
+h2:hover,
+span:hover {
+    cursor: default;
+}
+
 header {
     color: rgb(228, 228, 228);
     background-color: rgb(41, 41, 41);

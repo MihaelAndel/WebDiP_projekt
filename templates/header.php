@@ -22,6 +22,9 @@ if (isset($novaLozinka)) {
 if (isset($opremaLokacija)) {
     $skripte .= " <script src='../javascript/oprema-lokacija.js'></script>";
 }
+if (isset($zahtjevi)) {
+    $skripte .= " <script src='../javascript/zahtjevi-lokacija.js'></script>";
+}
 
 ?>
 

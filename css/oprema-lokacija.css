@@ -30,4 +30,3 @@ div#lista-opreme:nth-child(odd) {
 div#lista-opreme:nth-child(even) {
     grid-column-start: 2;
 }
-
