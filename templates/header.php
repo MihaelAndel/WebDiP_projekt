@@ -25,6 +25,9 @@ if (isset($opremaLokacija)) {
 if (isset($zahtjevi)) {
     $skripte .= " <script src='../javascript/zahtjevi-lokacija.js'></script>";
 }
+if (isset($zahtjevNajam)) {
+    $skripte .= " <script src='../javascript/zahtjev-najam.js'></script>";
+}
 
 ?>
 

@@ -3,11 +3,11 @@
     <izbornik naziv="Oprema i lokacije" uloge="1234">
         <izbor naziv="Pretraživanje opreme po lokaciji" 
         href="/oprema_lokacije/pregled-opreme-i-lokacija.php" uloge="1234"></izbor>
-        <izbor naziv="Kreiranje zahtjeva za najam opreme" href="" uloge="12"></izbor>
+        <izbor naziv="Kreiranje zahtjeva za najam opreme" href="/obrasci/zahtjev-za-najam.php" uloge="12"></izbor>
     </izbornik>
 
     <izbornik naziv="Slike i zahtjevi za slike" href="" uloge="123">
-        <izbor naziv="Kreiranje zahtjeva" href="/obrasci/zahtjev-za-slikanje.php"
+        <izbor naziv="Kreiranje zahtjeva za slikanje" href="/obrasci/zahtjev-za-slikanje.php"
             uloge="123"></izbor>
         <izbor naziv="Pregled mojih zahtjeva" href="/slike/pregled-mojih-zahtjeva.php" uloge="123"></izbor>
         <izbor naziv="Slike u kojima sam označen" href="/slike/slike-u-kojima-sam-oznacen.php" uloge="123"></izbor>
