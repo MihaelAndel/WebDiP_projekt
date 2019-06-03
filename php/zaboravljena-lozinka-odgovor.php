@@ -34,6 +34,7 @@ $baza->zatvoriDB();
 
 $naslov = "Zaboravljena lozinka";
 $css = "../css/zaboravljena-lozinka";
+$title = "Zaboravljena lozinka";
 include '../templates/header.php';
 ?>
 <main>
