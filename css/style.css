@@ -118,6 +118,8 @@ main {
 }
 
 main h1 {
+    font-family: 'Bree Serif', sans-serif;
+    color: #292929;
     text-align: center;
 }
 

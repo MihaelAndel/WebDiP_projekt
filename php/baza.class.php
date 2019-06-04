@@ -71,4 +71,9 @@ class Baza
             return false;
         }
     }
+
+    function posljednjiID()
+    {
+        return $this->veza->insert_id;
+    }
 }
