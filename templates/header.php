@@ -29,6 +29,18 @@ if (isset($zahtjevNajam)) {
     $skripte .= " <script src='../javascript/zahtjev-najam.js'></script>";
 }
 
+if (isset($marketing)) {
+    $skripte .= " <script src='../javascript/slike-marketing.js'></script>";
+}
+
+if (isset($oznacen)) {
+    $skripte .= " <script src='../javascript/oznacen.js'></script>";
+}
+
+if (isset($mojiZahtjevi)) {
+    $skripte .= " <script src='../javascript/moji-zahtjevi.js'></script>";
+}
+
 ?>
 
 <!DOCTYPE html>

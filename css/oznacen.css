@@ -8,6 +8,10 @@ main {
     grid-column-gap: 5%;
 }
 
-div.element h2:hover{
+div.element h2:hover {
     text-decoration: none;
+}
+
+img {
+    width: 50%;
 }

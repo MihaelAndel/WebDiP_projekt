@@ -157,7 +157,8 @@ footer span#odjava {
     margin: auto;
 }
 
-p#tip {
+p#tip,
+p#korime {
     display: none;
 }
 

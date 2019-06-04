@@ -1,0 +1,33 @@
+@import '../css/style.css';
+
+form {
+    text-align: left;
+}
+
+form select {
+    width: 100%;
+}
+
+form label {
+    display: inline;
+}
+
+form input {
+    margin: 10px 0;
+}
+
+form input[type="file"] {
+    display: block;
+}
+
+form #oprema,
+form #zahtjev {
+    display: block;
+    padding: 5px;
+    font-size: 120%;
+}
+
+form button {
+    margin: 10px;
+
+}
