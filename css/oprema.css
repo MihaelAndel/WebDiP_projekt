@@ -5,11 +5,12 @@ main {
 }
 
 h2 {
+    grid-column-start: 2;
     font-family: "Bree Serif";
     font-weight: normal;
-    margin: auto;
-    grid-column-start: 2;
     font-size: 300%;
+    color: #292929;
+    margin: auto;
 }
 
 ul {
