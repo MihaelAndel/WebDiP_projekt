@@ -1,0 +1,19 @@
+@import '../css/style.css';
+
+input,
+select,
+label {
+    font-size: 150%;
+    width: 100%;
+    display: block;
+    margin: 10px;
+}
+
+#frm-dodjela {
+    grid-column-start: 1;
+
+}
+
+#frm-kreiranje {
+    grid-column-start: 2:
+}

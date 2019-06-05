@@ -41,6 +41,26 @@ if (isset($mojiZahtjevi)) {
     $skripte .= " <script src='../javascript/moji-zahtjevi.js'></script>";
 }
 
+if (isset($zahtjevSlikanje)) {
+    $skripte .= " <script src='../javascript/zahtjevi-slikanje.js'></script>";
+}
+
+if (isset($blokiranje)) {
+    $skripte .= " <script src='../javascript/blokiranje.js'></script>";
+}
+
+if (isset($kreiranjeLokacije)) {
+    $skripte .= " <script src='../javascript/kreiranje-lokacije.js'></script>";
+}
+
+if (isset($kreiranjeOpreme)) {
+    $skripte .= " <script src='../javascript/kreiranje-opreme.js'></script>";
+}
+
+if (isset($dodjela)) {
+    $skripte .= " <script src='../javascript/dodjela-moderatora.js'></script>";
+}
+
 ?>
 
 <!DOCTYPE html>

@@ -1,0 +1,26 @@
+@import '../css/style.css';
+
+table {
+    width: 80%;
+    text-align: center;
+}
+
+td {
+    background-color: #292929;
+    padding-right: 10px;
+    color: rgb(228, 228, 228);
+    font-family: 'Oxygen';
+    transition: 0.2s ease-in-out;
+}
+
+tbody td:hover {
+    background-color: rgb(165, 255, 255);
+    color: rgb(41, 41, 41);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+
+thead {
+    font-weight: 700;
+    font-size: 120%;
+}

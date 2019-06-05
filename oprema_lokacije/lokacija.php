@@ -39,6 +39,7 @@ include '../templates/header.php';
         echo "<ul>"
             . "<li>Ime: {$redModeratori['ime']}</li>"
             . "<li>Prezime: {$redModeratori['prezime']}</li>"
+            . "</ul>"
             . "<hr>";
     }
     echo "</ul></div>";

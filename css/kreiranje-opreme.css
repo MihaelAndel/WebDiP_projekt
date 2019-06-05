@@ -1,0 +1,13 @@
+@import '../css/style.css';
+
+input {
+    display: block;
+    margin: 20px;
+}
+
+select {
+    display: block;
+    width: 90%;
+    margin: 10px;
+
+}

@@ -17,6 +17,10 @@
     </izbornik>
 
     <izbornik naziv="Administracija" uloge="1">
+        <izbor naziv="Blokiranje korisnika" href="/administracija/blokiranje-korisnika.php" uloge="1"></izbor>
+        <izbor naziv="Dodjela moderatora" href="/administracija/dodjela-moderatora.php" uloge="1"></izbor>
+        <izbor naziv="Kreiranje lokacije" href="/administracija/kreiranje-lokacije.php" uloge="1"></izbor>
+        <izbor naziv="Kreiranje opreme" href="/administracija/kreiranje-opreme.php" uloge="1"></izbor>
     </izbornik>
 
     <izbornik naziv="Ostalo" uloge="1234">
