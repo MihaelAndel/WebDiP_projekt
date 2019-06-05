@@ -11,7 +11,6 @@
             uloge="123"></izbor>
         <izbor naziv="Pregled mojih zahtjeva" href="/slike/pregled-mojih-zahtjeva.php" uloge="123"></izbor>
         <izbor naziv="Slike u kojima sam označen" href="/slike/slike-u-kojima-sam-oznacen.php" uloge="123"></izbor>
-        <izbor naziv="Moje slike" href="" uloge="12"></izbor>
         <izbor naziv="Zahtjevi za slikanje" href="/slike/zahtjevi-lokacija.php" uloge="12"></izbor>
         <izbor naziv="Postavi sliku u marketinške svrhe" href="/obrasci/slike-marketinske-svrhe.php" uloge="12"></izbor>
     </izbornik>
@@ -21,9 +20,12 @@
         <izbor naziv="Dodjela moderatora" href="/administracija/dodjela-moderatora.php" uloge="1"></izbor>
         <izbor naziv="Kreiranje lokacije" href="/administracija/kreiranje-lokacije.php" uloge="1"></izbor>
         <izbor naziv="Kreiranje opreme" href="/administracija/kreiranje-opreme.php" uloge="1"></izbor>
+        <izbor naziv="Zahtjevi za najam" href="/administracija/zahtjevi-za-najam.php" uloge="1"></izbor>
     </izbornik>
 
     <izbornik naziv="Ostalo" uloge="1234">
+        <izbor naziv="Dokumentacija" href="/ostalo/dokumentacija.php" uloge="1234"></izbor>
+        <izbor naziv="O autoru" href="/ostalo/o_autoru.php" uloge="1234"></izbor>
     </izbornik>
 
 </navigacija>

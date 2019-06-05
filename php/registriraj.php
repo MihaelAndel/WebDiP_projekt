@@ -14,8 +14,8 @@ if (ProvjeriPodatke()) {
         $lozinkaK = md5($sol . $lozinka);
         $datum = date("Y-m-d H:i:s", strtotime('+7 hours'));
 
-        $sql = "INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka, lozinka_kriptirano, email) 
-                VALUES ('{$ime}', '{$prezime}', '{$korime}', '{$lozinka}', '{$lozinkaK}', '{$email}')";
+        $sql = "INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka, lozinka_kriptirano, email, datum_vrijeme_uvjeta) 
+                VALUES ('{$ime}', '{$prezime}', '{$korime}', '{$lozinka}', '{$lozinkaK}', '{$email}', '{$datum}')";
 
         $baza = new Baza();
         $baza->spojiDB();

@@ -92,12 +92,14 @@ $(function () {
                         "display": "inline-block"
                     });
                     $(lblLozinka).html("Lozinke nisu jednake!");
+                    $(gumb).attr("disabled", "disabled");
                 } else {
                     $(lblLozinka).css({
                         "display": "none"
                     });
                     $(lozinka).removeClass("krivi-unos");
                     $(this).removeClass("krivi-unos");
+                    $(gumb).removeAttr("disabled", "disabled");
                 }
             } else {
                 $(lblLozinka).css({
@@ -125,7 +127,7 @@ $(function () {
 
     $(korime).keyup(function () {
         if ($(this).val().length !== 0) {
-            if ($(this).val().length < 4) {
+            if ($(this).val().length < 6) {
                 $(gumb).attr("disabled", "disabled");
                 $(this).addClass("krivi-unos");
                 $(lblKorime).css({
@@ -133,6 +135,7 @@ $(function () {
                 });
                 $(lblKorime).html("Koriničko ime mora imati barem šest znakova!");
             } else {
+                $(gumb).removeAttr("disabled");
                 $(lblKorime).css({
                     "display": "none"
                 });

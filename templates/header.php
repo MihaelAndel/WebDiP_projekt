@@ -61,6 +61,9 @@ if (isset($dodjela)) {
     $skripte .= " <script src='../javascript/dodjela-moderatora.js'></script>";
 }
 
+if (isset($zahtjevNajamAdmin)) {
+    $skripte .= " <script src='../javascript/admin-zahtjev-najam.js'></script>";
+}
 ?>
 
 <!DOCTYPE html>

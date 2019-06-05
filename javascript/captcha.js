@@ -27,5 +27,6 @@ function validateCaptcha() {
     if (document.getElementById("cpatchaTextBox").value == code) {} else {
         alert("Invalid Captcha. try Again");
         createCaptcha();
+        event.preventDefault();
     }
 }

@@ -1,0 +1,40 @@
+@import '../css/style.css';
+
+#popis-zahtjeva {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 3%;
+    grid-template-rows: repeat(auto-fill, auto);
+}
+
+div#popis-zahtjeva:nth-child(odd) {
+    grid-column-start: 1;
+}
+
+div#popis-zahtjeva:nth-child(even) {
+    grid-column-start: 2;
+}
+
+button.prihvati,
+button.odbij {
+    border: 0;
+    border-radius: 3px;
+    margin-right: 5px;
+    transition: 0.1s ease-in-out;
+}
+
+button.prihvati:hover {
+    background-color: rgb(52, 134, 52);
+}
+
+button.odbij:hover {
+    background-color: rgb(155, 47, 47);
+}
+
+button.odbij:hover,
+button.prihvati:hover {
+    cursor: pointer;
+}
